@@ -73,11 +73,6 @@
           question: '如何进行选民资格转移？',
           description: '对本选区登记的选民进行资格转移申请，以实现迁出。',
           id: 1
-        },
-        {
-        	question: "hhh",
-        	description: "hhhh",
-        	id: 2
         }],
         tableData: [],
         search: '',
