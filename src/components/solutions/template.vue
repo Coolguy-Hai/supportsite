@@ -1,0 +1,110 @@
+<template>
+	<el-container style="margin: 0px">
+	  <el-header style="padding: 0px">
+		  <div class="header-wrapper">
+		    <div class="header-title">
+			    <i class="logo"></i>
+				<span class="header-home">涪城区选民登记系统</span>
+		    </div>
+		  </div>
+	  </el-header>
+	  <el-main>
+		  <el-row type="flex" class="row-bg" justify="center">
+			  <el-col :span="23">
+			  	<el-card class="box-card">
+				  	<div slot="header" class="clearfix" >
+					    <span style="font-family: Microsoft YaHei;font-size: 30px">{{ title }}</span><br/>
+					    <span>{{ description }}</span>
+					    <br/><br/>
+				    	<iframe height=400 width=510 :src=video frameborder=0 allowfullscreen='true'></iframe>
+					  </div>
+					  <el-collapse v-model="activeNames" @change="handleChange">
+					  	<el-collapse-item v-for="step in steps" :title="step.intro" :name="step.intro">
+					  		<img v-for="img in step.imgs" width="55%" height="100%" :src=img>{{i}}</img>
+						  </el-collapse-item>
+						</el-collapse>
+					</el-card>
+			  </el-col>
+			</el-row>
+			
+	  </el-main>
+	  <el-divider></el-divider>
+	  <el-footer>
+	  	<el-row :gutter="20">
+			  <el-col :span="2" style="margin-left: 20px;font-family: STHeiti Light"><div class="grid-content bg-purple">帮助和支持</div></el-col>
+			  <el-col :span="2"><div class="grid-content bg-purple"><el-link href="#/contact" type="primary">联系我们</el-link></div></el-col>
+			  <el-col :span="2"><div class="grid-content bg-purple"><el-link href="#/download" type="primary">资料下载</el-link></div></el-col>
+			  <el-col :span="2"><div class="grid-content bg-purple"><el-link href="#/questions" type="primary">常见问题</el-link></div></el-col>
+			</el-row>
+		</el-footer>
+	</el-container>
+</template>
+<script>
+  export default {
+    data() {
+      return {
+        activeNames: [],
+        title: "如何进行选民资格转移？",
+        description: "对本选区登记的选民进行资格转移申请，以实现迁出。",
+        video: "https://player.youku.com/embed/XNTE2MTIwOTgyMA==",
+        steps: [
+        	{
+        		intro: "1、进入管理选民界面",
+        		imgs: ["../../../static/solutions/solution1/img1.png"]
+        	},
+        	{
+        		intro: "2、选中待资格转移选民",
+        		imgs: ["../../../static/solutions/solution1/img2.png"]
+        	},
+        	{
+        		intro: "3、点击选民信息后操作选项，点击资格转移进入资格转移操作界面",
+        		imgs: ["../../../static/solutions/solution1/img1.png"]
+        	}
+        ]
+      };
+    },
+    created: function(){
+    	for(var i = 0;i < this.steps.length;i++){
+    		this.activeNames.push(this.steps[i].intro);
+    	}
+    },
+    methods: {
+      handleChange(val) {
+        console.log(val);
+      }
+    }
+  }
+</script>
+<style>
+	.header-title {
+	  display: flex;
+	  align-items: center;
+	}
+	.header-wrapper {
+	  width: 100%;
+	  height: 60px;
+	  padding: 0px 0px 0 px;
+	  background: url("../../assets/imgs/header.jpg") center center no-repeat;
+	  background-size: 100% 100%;
+	  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.22);
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  color: #06d3d3;
+	}
+	.logo {
+	  background: url("../../assets/imgs/logo.png") center center no-repeat;
+	  background-size: 100% 100%;
+	  width: 48px;
+	  height: 51px;
+	  display: inline-block;
+	  margin-right: 16px;
+	  margin-left: 10px;
+	}
+	.header-home {
+	  font-size: 24px;
+	  font-family: STXihei;
+	  color: #ffcf42;
+	  font-weight: 500;
+	}
+</style>
