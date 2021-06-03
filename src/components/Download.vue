@@ -1,13 +1,5 @@
 <template>
 	<el-container style="margin: 0px">
-	  <el-header style="padding: 0px">
-		  <div class="header-wrapper">
-		    <div class="header-title">
-			    <i class="logo"></i>
-				<span class="header-home">涪城区选民登记系统</span>
-		    </div>
-		  </div>
-	  </el-header>
 	  <el-main>
 			 <el-row type="flex" class="row-bg" justify="center">
 			  <el-col :span="3" style="font-family: Microsoft YaHei;font-size: 30px;margin: 30px;"><div><span>相关资料下载</span></div></el-col>
@@ -15,7 +7,7 @@
 
 		  <el-divider></el-divider>
 			<el-row type="flex" class="row-bg" justify="space-around">
-			  <el-col :span="3">
+			  <el-col :span="2">
 			  	<el-card :body-style="{ padding: '0px' }">
 			      <img src="../assets/imgs/browser.png" class="image">
 			      <div style="padding: 14px;">
@@ -26,7 +18,7 @@
 			      </div>
 			    </el-card>
 			  </el-col>
-			  <el-col :span="3">
+			  <el-col :span="2">
 			  	<el-card :body-style="{ padding: '0px' }">
 			      <img src="../assets/imgs/manual.png" class="image">
 			      <div style="padding: 14px;">
@@ -37,7 +29,7 @@
 			      </div>
 			    </el-card>
 			  </el-col>
-			  <el-col :span="3">
+			  <el-col :span="2">
 			  	<el-card :body-style="{ padding: '0px' }">
 			      <img src="../assets/imgs/video.png" class="image">
 			      <div style="padding: 14px;">
@@ -48,7 +40,7 @@
 			      </div>
 			    </el-card>
 			  </el-col>
-			  <el-col :span="3">
+			  <el-col :span="2">
 			  	<el-card :body-style="{ padding: '0px' }">
 			      <img src="../assets/imgs/help.png" class="image">
 			      <div style="padding: 14px;">
@@ -61,17 +53,21 @@
 			  </el-col>
 			</el-row>
 	  </el-main>
-	  <el-divider></el-divider>
-	  <el-footer>
-	  	<el-row :gutter="20">
-			  <el-col :span="2" style="margin-left: 20px;font-family: STHeiti Light"><div class="grid-content bg-purple">帮助和支持</div></el-col>
-			  <el-col :span="2"><div class="grid-content bg-purple"><el-link href="#/contact" type="primary">联系我们</el-link></div></el-col>
-			  <el-col :span="2"><div class="grid-content bg-purple"><el-link href="#/download" type="primary">资料下载</el-link></div></el-col>
-			  <el-col :span="2"><div class="grid-content bg-purple"><el-link href="#/questions" type="primary">常见问题</el-link></div></el-col>
-			</el-row>
-		</el-footer>
 	</el-container>
 </template>
+<script>
+  export default {
+    data() {
+      return {
+        system: ''
+      };
+    },
+    created: function(){
+    	this.system = this.$route.query.system;
+    }
+  }
+</script>
+
 <style>
 	.header-title {
 	  display: flex;

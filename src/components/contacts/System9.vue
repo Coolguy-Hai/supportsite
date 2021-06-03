@@ -1,71 +1,47 @@
 <template>
 	<el-container style="margin: 0px">
-	  <el-header style="padding: 0px">
-		  <div class="header-wrapper">
-		    <div class="header-title">
-			    <i class="logo"></i>
-				<span class="header-home">涪城区选民登记系统</span>
-		    </div>
-		  </div>
-	  </el-header>
 	  <el-row type="flex" class="row-bg" justify="center">
 			  <el-col :span="24" style="font-family: Microsoft YaHei;font-size: 30px;margin: 30px;margin-bottom:5px"><span>欢迎联系我们</span></el-col>
 		</el-row>
-	  <el-divider></el-divider>
+		<el-row type="flex" class="row-bg" justify="center">
+			  <el-col :span="24" style="font-family: Microsoft YaHei;font-size: 17px; margin: 30px;margin-top: 0;margin-bottom:5px"><span>如果您在使用系统的过程中遇到任何问题，请及时联系我们，我们非常乐于帮你及时解答。</span></el-col>
+		</el-row>
 	  <el-main >
 	  	<el-row type="flex" class="row-bg" justify="center">
 			  <el-col :span="24">
 			  	<el-card class="box-card">
-				  	<div slot="header" class="clearfix" >
-					  </div>
 					  <ul style="list-style-type:none;padding: 0">
-					  	<li>如果您在使用系统的过程中遇到任何问题，请及时联系我们，我们非常乐于帮你及时解答。</li>
-					  	<br/>
 						  <li>陈先生： 13333333333</li>
-						  <br/>
 						  <li>工作时间：xxxx</li>
 					  </ul>
-					  <el-divider></el-divider>
 					</el-card>
 			  </el-col>
 			</el-row>
-	  </el-main>
-	  <el-divider></el-divider>		
+	  </el-main>	
 	  <el-footer>
-	  	<el-row :gutter="20">
-			  <el-col :span="2" style="margin-left: 20px;font-family: STHeiti Light"><div class="grid-content bg-purple">帮助和支持</div></el-col>
-			  <el-col :span="2"><div class="grid-content bg-purple"><el-link href="#/contact" type="primary">联系我们</el-link></div></el-col>
-			  <el-col :span="2"><div class="grid-content bg-purple"><el-link href="#/download" type="primary">资料下载</el-link></div></el-col>
-			  <el-col :span="2"><div class="grid-content bg-purple"><el-link href="#/questions" type="primary">常见问题</el-link></div></el-col>
-			</el-row>
 		</el-footer>
 	</el-container>
 </template>
+<script>
+  export default {
+    data() {
+      return {
+        system: ''
+      };
+    },
+    created: function(){
+    	this.system = this.$route.query.system;
+    }
+  }
+</script>
+
 <style>
+	li{
+		font-size: 18px;
+	}
 	.header-title {
 	  display: flex;
 	  align-items: center;
-	}
-	.header-wrapper {
-	  width: 100%;
-	  height: 60px;
-	  padding: 0px 0px 0 px;
-	  background: url("../../assets/imgs/header.jpg") center center no-repeat;
-	  background-size: 100% 100%;
-	  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.22);
-	  display: flex;
-	  align-items: center;
-	  justify-content: space-between;
-	  color: #06d3d3;
-	}
-	.logo {
-	  background: url("../../assets/imgs/logo.png") center center no-repeat;
-	  background-size: 100% 100%;
-	  width: 48px;
-	  height: 51px;
-	  display: inline-block;
-	  margin-right: 16px;
-	  margin-left: 10px;
 	}
 	.header-home {
 	  font-size: 24px;

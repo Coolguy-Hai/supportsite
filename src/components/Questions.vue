@@ -1,20 +1,13 @@
 <template>
 	<el-container style="margin: 0px">
-	  <el-header style="padding: 0px">
-		  <div class="header-wrapper">
-		    <div class="header-title">
-			    <i class="logo"></i>
-				<span class="header-home">涪城区选民登记系统</span>
-		    </div>
-		  </div>
-	  </el-header>
 	  <el-main>
 		  <el-row type="flex" class="row-bg" justify="center">
-			  <el-col :span="6" style="font-family: Microsoft YaHei;font-size: 30px;margin: 30px;"><div><span>您有什么需要帮助的？</span></div></el-col>
+			  <el-col :span="6" style="font-family: Microsoft YaHei;font-size: 30px;margin-bottom: 30px;"><div><span>您有什么需要帮助的？</span></div></el-col>
 			</el-row>
 	    <el-table height="390px"
 	      :data="tableData"
-	      style="width: 100%">
+	      style="width: 100%"
+	      @cell-dblclick = "handledbclick">
 	      <el-table-column
 		      label="常见问题"
 		      width="700px">
@@ -53,15 +46,6 @@
 			  </el-col>
 			</el-row>	    
 	  </el-main>
-	  <el-divider></el-divider>
-	  <el-footer>
-	  	<el-row :gutter="20">
-			  <el-col :span="2" style="margin-left: 20px;font-family: STHeiti Light"><div class="grid-content bg-purple">帮助和支持</div></el-col>
-			  <el-col :span="2"><div class="grid-content bg-purple"><el-link href="#/contact" type="primary">联系我们</el-link></div></el-col>
-			  <el-col :span="2"><div class="grid-content bg-purple"><el-link href="#/download" type="primary">资料下载</el-link></div></el-col>
-			  <el-col :span="2"><div class="grid-content bg-purple"><el-link href="#/questions" type="primary">常见问题</el-link></div></el-col>
-			</el-row>
-		</el-footer>
 	</el-container>
 </template>
 
@@ -73,11 +57,42 @@
           question: '如何进行选民资格转移？',
           description: '对本选区登记的选民进行资格转移申请，以实现迁出。',
           id: 1
+        },
+        {
+          question: '如何进行选民资格转移？',
+          description: '对本选区登记的选民进行资格转移申请，以实现迁出。',
+          id: 1
+        },
+        {
+          question: '如何进行选民资格转移？',
+          description: '对本选区登记的选民进行资格转移申请，以实现迁出。',
+          id: 1
+        },
+        {
+          question: '如何进行选民资格转移？',
+          description: '对本选区登记的选民进行资格转移申请，以实现迁出。',
+          id: 1
+        },
+        {
+          question: '如何进行选民资格转移？',
+          description: '对本选区登记的选民进行资格转移申请，以实现迁出。',
+          id: 1
+        },
+        {
+          question: '如何进行选民资格转移？',
+          description: '对本选区登记的选民进行资格转移申请，以实现迁出。',
+          id: 1
+        },
+        {
+          question: '如何进行选民资格转移？',
+          description: '对本选区登记的选民进行资格转移申请，以实现迁出。',
+          id: 1
         }],
         tableData: [],
         search: '',
         total: 0,
-        pagesize: 5
+        pagesize: 5,
+        system: ''
       }
     },
     created: function(){
@@ -86,6 +101,7 @@
     	var end = this.pagesize > this.total ? this.total : this.pagesize;
     	var start = 0;
     	this.tableData = this.filteredData.slice(start, end);
+    	this.system = this.$route.query.system;
     },
     computed: {
 		},
@@ -110,6 +126,9 @@
       	var start = (page-1)*this.pagesize;
       	this.tableData = this.allData.slice(start, end);
       	console.log(start, end, this.tableData);
+      },
+      handledbclick(row, column, cell, event){
+      	this.$router.push("/solution"+row.id);
       }
     },
   }
