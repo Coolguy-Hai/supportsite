@@ -24,7 +24,7 @@
 			      <div style="padding: 14px;">
 			        <span>用户手册</span>
 			        <div class="bottom clearfix">
-			          <el-link type="primary" href="../../static/manual.docx" download="选民登记系统用户手册.docx" style="float: right">下载</el-link>
+			          <el-link type="primary" href="./static/manual.docx" download="选民登记系统用户手册.docx" style="float: right">下载</el-link>
 			        </div>
 			      </div>
 			    </el-card>
@@ -35,7 +35,7 @@
 			      <div style="padding: 14px;">
 			        <span>演示视频</span>
 			        <div class="bottom clearfix">
-			          <el-link type="primary" href="../../static/video.mp4" download="演示视频.mp4" style="float: right">下载</el-link>
+			          <el-link type="primary" href="./static/video.mp4" download="演示视频.mp4" style="float: right">下载</el-link>
 			        </div>
 			      </div>
 			    </el-card>

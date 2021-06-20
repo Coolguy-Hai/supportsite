@@ -35,15 +35,15 @@
         steps: [
         	{
         		intro: "1、进入管理选民界面",
-        		imgs: ["../../../static/solutions/solution1/img1.png"]
+        		imgs: ["./static/solutions/solution1/img1.png"]
         	},
         	{
         		intro: "2、选中待资格转移选民",
-        		imgs: ["../../../static/solutions/solution1/img2.png"]
+        		imgs: ["./static/solutions/solution1/img2.png"]
         	},
         	{
         		intro: "3、点击选民信息后操作选项，点击资格转移进入资格转移操作界面",
-        		imgs: ["../../../static/solutions/solution1/img1.png"]
+        		imgs: ["./static/solutions/solution1/img1.png"]
         	}
         ]
       };

@@ -6,19 +6,18 @@
 			  	<el-card class="box-card">
 				  	<div slot="header" class="clearfix" >
 					    <span style="font-family: Microsoft YaHei;font-size: 30px">{{ title }}</span><br/>
-					    <span>{{ description }}</span>
+					    <span style="font-size: 18px">{{ description }}</span>
 					    <br/><br/>
 				    	<iframe height=400 width=510 :src=video frameborder=0 allowfullscreen='true'></iframe>
 					  </div>
-					  <el-collapse v-model="activeNames" @change="handleChange">
-					  	<el-collapse-item v-for="step in steps" :title="step.intro" :name="step.intro">
+					  <el-collapse v-model="activeNames" @change="handleChange" class="step">
+					  	<el-collapse-item v-for="step in steps" :title="step.intro" :name="step.intro" >
 					  		<img v-for="img in step.imgs" width="55%" height="100%" :src=img>{{i}}</img>
 						  </el-collapse-item>
 						</el-collapse>
 					</el-card>
 			  </el-col>
 			</el-row>
-			
 	  </el-main>
 	  <el-footer>
 		</el-footer>
@@ -36,15 +35,15 @@
         steps: [
         	{
         		intro: "1、进入管理选民界面",
-        		imgs: ["../../../static/solutions/solution1/img1.png"]
+        		imgs: ["./static/solutions/solution1/img1.png"]
         	},
         	{
         		intro: "2、选中待资格转移选民",
-        		imgs: ["../../../static/solutions/solution1/img2.png"]
+        		imgs: ["./static/solutions/solution1/img2.png"]
         	},
         	{
         		intro: "3、点击选民信息后操作选项，点击资格转移进入资格转移操作界面",
-        		imgs: ["../../../static/solutions/solution1/img1.png"]
+        		imgs: ["./static/solutions/solution1/img1.png"]
         	}
         ]
       };
@@ -63,35 +62,7 @@
   }
 </script>
 <style>
-	.header-title {
-	  display: flex;
-	  align-items: center;
-	}
-	.header-wrapper {
-	  width: 100%;
-	  height: 60px;
-	  padding: 0px 0px 0 px;
-	  background: url("../../assets/imgs/header.jpg") center center no-repeat;
-	  background-size: 100% 100%;
-	  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.22);
-	  display: flex;
-	  align-items: center;
-	  justify-content: space-between;
-	  color: #06d3d3;
-	}
-	.logo {
-	  background: url("../../assets/imgs/logo.png") center center no-repeat;
-	  background-size: 100% 100%;
-	  width: 48px;
-	  height: 51px;
-	  display: inline-block;
-	  margin-right: 16px;
-	  margin-left: 10px;
-	}
-	.header-home {
-	  font-size: 24px;
-	  font-family: STXihei;
-	  color: #ffcf42;
-	  font-weight: 500;
+	.el-collapse-item__header{
+		font-size: 18px;
 	}
 </style>

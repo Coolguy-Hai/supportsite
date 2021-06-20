@@ -13,7 +13,7 @@
 			      <div style="padding: 14px;">
 			        <span>Chrome</span>
 			        <div class="bottom clearfix">
-			          <el-link type="primary" href="../../static/browser/Chrome/谷歌浏览器稳定版 64位_90.0.4430.93.exe" style="float: right">下载</el-link>
+			          <el-link type="primary" href="./static/browser/Chrome/谷歌浏览器稳定版 64位_90.0.4430.93.exe" style="float: right">下载</el-link>
 			        </div>
 			      </div>
 			    </el-card>
@@ -24,7 +24,7 @@
 			      <div style="padding: 14px;">
 			        <span>Edge</span>
 			        <div class="bottom clearfix">
-			          <el-link type="primary" href="../../static/browser/Edge/Microsoft Edge_85.0.564.44.exe" style="float: right">下载</el-link>
+			          <el-link type="primary" href="./static/browser/Edge/Microsoft Edge_85.0.564.44.exe" style="float: right">下载</el-link>
 			        </div>
 			      </div>
 			    </el-card>
@@ -35,7 +35,7 @@
 			      <div style="padding: 14px;">
 			        <span>Firefox</span>
 			        <div class="bottom clearfix">
-			          <el-link type="primary" href="../../static/browser/Firefox/Firefox火狐浏览器 64位_88.0.1.7794.exe" style="float: right">下载</el-link>
+			          <el-link type="primary" href="./static/browser/Firefox/Firefox火狐浏览器 64位_88.0.1.7794.exe" style="float: right">下载</el-link>
 			        </div>
 			      </div>
 			    </el-card>
@@ -46,7 +46,7 @@
 			      <div style="padding: 14px;">
 			        <span>IE</span>
 			        <div class="bottom clearfix">
-			          <el-link type="primary" href="../../static/browser/IE/EIE11_64.EXE" style="float: right">下载</el-link>
+			          <el-link type="primary" href="./static/browser/IE/EIE11_64.EXE" style="float: right">下载</el-link>
 			        </div>
 			      </div>
 			    </el-card>
