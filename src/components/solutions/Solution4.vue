@@ -7,8 +7,6 @@
 				  	<div slot="header" class="clearfix" >
 					    <span style="font-family: Microsoft YaHei;font-size: 30px">{{ title }}</span><br/>
 					    <span style="font-size: 18px">{{ description }}</span>
-					    <br/><br/>
-				    	<iframe height=400 width=510 :src=video frameborder=0 allowfullscreen='true'></iframe>
 					  </div>
 					  <el-collapse v-model="activeNames" @change="handleChange" class="step">
 					  	<el-collapse-item v-for="step in steps" :title="step.intro" :name="step.intro" >
@@ -29,33 +27,33 @@
       return {
       	system: '',
         activeNames: [],
-        title: "如何进行选民资格转移？",
-        description: "对本选区登记的选民进行资格转移申请，以实现迁出。",
-        video: "https://player.youku.com/embed/XNTE2MTIwOTgyMA==",
+        title: "如何批量录入？",
+        description: "",
+        video: "",
         steps: [
         	{
-        		intro: "1、进入管理选民界面",
-        		imgs: ["./static/solutions/solution1/img1.png"]
+        		intro: "1、进入选民信息登记-选民批量录入界面",
+        		imgs: ["./static/solutions/solution4/img1.png"]
         	},
         	{
-        		intro: "2、选中待资格转移选民",
-        		imgs: ["./static/solutions/solution1/img2.png"]
+        		intro: "2、单击选民登记蓝色文字，下载批量录入选民模板",
+        		imgs: ["./static/solutions/solution4/img2.png"]
         	},
         	{
-        		intro: "3、点击选民信息后操作选项，点击资格转移进入资格转移操作界面",
-        		imgs: ["./static/solutions/solution1/img3-1.png", "./static/solutions/solution1/img3-2.png"]
+        		intro: "3、下载完成后，打开模板进行信息填写",
+        		imgs: ["./static/solutions/solution4/img3.png"]
         	},
             {
-                intro: "4、选择资格转移目的选区",
-                imgs: ["./static/solutions/solution1/img4.png"]
+                intro: "4、进入模板后，需要先把四个工作表内的示例清空",
+                imgs: ["./static/solutions/solution4/img4.png"]
             },
             {
-                intro: "5、上传转移证明（bmp、gif、jpg、pic、png、doc、docx、pdf、tif格式）、以及转移说明",
-                imgs: ["./static/solutions/solution1/img5.png"]
+                intro: "5、表格左下角的四个工作表和表格标题（第一、二行不能删除或修改）",
+                imgs: ["./static/solutions/solution4/img5.png"]
             },
             {
-                intro: "6、点击确定完成转移",
-                imgs: ["./static/solutions/solution1/img6.png"]
+                intro: "6、红色文字项为必填项，黑色问题项为选填项）",
+                imgs: ["./static/solutions/solution4/img6.png"]
             }
         ]
       };

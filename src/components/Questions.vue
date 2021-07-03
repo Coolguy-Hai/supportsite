@@ -59,34 +59,29 @@
           id: 1
         },
         {
-          question: '如何进行选民资格转移？',
-          description: '对本选区登记的选民进行资格转移申请，以实现迁出。',
-          id: 1
+          question: '如何删除选区账号？',
+          description: '',
+          id: 2
         },
         {
-          question: '如何进行选民资格转移？',
-          description: '对本选区登记的选民进行资格转移申请，以实现迁出。',
-          id: 1
+          question: '如何增加选区账号？',
+          description: '',
+          id: 3
         },
         {
-          question: '如何进行选民资格转移？',
-          description: '对本选区登记的选民进行资格转移申请，以实现迁出。',
-          id: 1
+          question: '如何批量录入？',
+          description: '',
+          id: 4
         },
         {
-          question: '如何进行选民资格转移？',
-          description: '对本选区登记的选民进行资格转移申请，以实现迁出。',
-          id: 1
+          question: '如何进行选民登记？',
+          description: '',
+          id: 5
         },
         {
-          question: '如何进行选民资格转移？',
-          description: '对本选区登记的选民进行资格转移申请，以实现迁出。',
-          id: 1
-        },
-        {
-          question: '如何进行选民资格转移？',
-          description: '对本选区登记的选民进行资格转移申请，以实现迁出。',
-          id: 1
+          question: '如何导出失败数据？',
+          description: '',
+          id: 6
         }],
         tableData: [],
         search: '',

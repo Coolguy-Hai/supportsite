@@ -11,8 +11,8 @@
 			  <el-col :span="24">
 			  	<el-card class="box-card">
 					  <ul style="list-style-type:none;padding: 0">
-						  <li>陈先生： 13333333333</li>
-						  <li>工作时间：xxxx</li>
+						  <li>伍思玉： 18382605349</li>
+						  <li>杨进： 15608230086</li>
 					  </ul>
 					</el-card>
 			  </el-col>

@@ -14,8 +14,12 @@ import System6 from "../components/contacts/System6"
 import System7 from "../components/contacts/System7"
 import System8 from "../components/contacts/System8"
 import System9 from "../components/contacts/System9"
-import Solution1 from "../components/solutions/Solution1";
-
+import Solution1 from "../components/solutions/Solution1"
+import Solution2 from "../components/solutions/Solution2"
+import Solution3 from "../components/solutions/Solution3"
+import Solution4 from "../components/solutions/Solution4"
+import Solution5 from "../components/solutions/Solution5"
+import Solution6 from "../components/solutions/Solution6"
 
 Vue.use(Router)
 
@@ -84,6 +88,26 @@ export default new Router({
   	{
   		path: '/solution1',
   		component: Solution1
-  	}
+  	},
+    {
+      path: '/solution2',
+      component: Solution2
+    },
+    {
+      path: '/solution3',
+      component: Solution3
+    },
+    {
+      path: '/solution4',
+      component: Solution4
+    },
+    {
+      path: '/solution5',
+      component: Solution5
+    },
+    {
+      path: '/solution6',
+      component: Solution6
+    }
   ]
 })
